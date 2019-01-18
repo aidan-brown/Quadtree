@@ -1,0 +1,7 @@
+D:\Profiles\afb3535\source\repos\Quadtree\Quadtree\bin\Debug\Quadtree.exe.config
+D:\Profiles\afb3535\source\repos\Quadtree\Quadtree\bin\Debug\Quadtree.exe
+D:\Profiles\afb3535\source\repos\Quadtree\Quadtree\bin\Debug\Quadtree.pdb
+D:\Profiles\afb3535\source\repos\Quadtree\Quadtree\obj\Debug\Quadtree.csprojAssemblyReference.cache
+D:\Profiles\afb3535\source\repos\Quadtree\Quadtree\obj\Debug\Quadtree.csproj.CoreCompileInputs.cache
+D:\Profiles\afb3535\source\repos\Quadtree\Quadtree\obj\Debug\Quadtree.exe
+D:\Profiles\afb3535\source\repos\Quadtree\Quadtree\obj\Debug\Quadtree.pdb
