@@ -10,9 +10,9 @@ namespace Quadtree
     {
         public Node nw, ne, sw, se;
         private List<Vector2> p, listNW, listNE, listSW, listSE;
-        private int x1, x2, y1, y2;
+        private double x1, x2, y1, y2;
 
-        public Node(List<Vector2> list, int _x1, int _x2, int _y1, int _y2)
+        public Node(List<Vector2> list, double _x1, double _x2, double _y1, double _y2)
         {
             p = list;
             x1 = _x1;
@@ -24,32 +24,36 @@ namespace Quadtree
             listSW = new List<Vector2>();
             listSE = new List<Vector2>();
 
-            if (list.Count > 4)
+            if (list.Count > 2)
             {
                 foreach (Vector2 v in p)
                 {
-                    if((v.X >= x1 && v.X <= x2 / 2) && (v.Y >= y1 && v.Y <= y2 / 2))
+                    if((v.X >= x1 && v.X <= x1 + x2 / 2) && (v.Y >= y1 && v.Y <= y1 + y2 / 2))
                     {
                         listNW.Add(v);
+                        Console.WriteLine("ADDED TO NW");
                     }
-                    if ((v.X <= x2 && v.X >= x2 / 2) && (v.Y >= y1 && v.Y <= y2 / 2))
+                    if ((v.X <= x2 && v.X >= x1 + x2 / 2) && (v.Y >= y1 && v.Y <= y1 + y2 / 2))
                     {
                         listNE.Add(v);
+                        Console.WriteLine("ADDED TO NE");
                     }
-                    if ((v.X >= x1 && v.X <= x2 / 2) && (v.Y <= y2 && v.Y >= y2 / 2))
+                    if ((v.X >= x1 && v.X <= x1 + x2 / 2) && (v.Y <= y2 && v.Y >= y1 + y2 / 2))
                     {
                         listSW.Add(v);
+                        Console.WriteLine("ADDED TO SW");
                     }
-                    if ((v.X <= x2 && v.X >= x2 / 2) && (v.Y <= y2 && v.Y >= y2 / 2))
+                    if ((v.X <= x2 && v.X >= x1 + x2 / 2) && (v.Y <= y2 && v.Y >= y1 + y2 / 2))
                     {
                         listSE.Add(v);
+                        Console.WriteLine("ADDED TO SE");
                     }
                 }
-
-                nw = new Node(listNW, x1, x2 / 2, y1, y2 / 2);
-                ne = new Node(listNE, x2 / 2, x2, y1, y2 / 2);
-                sw = new Node(listSW, x1, x2 / 2, y2 / 2, y2);
-                se = new Node(listSE, x2 / 2, x2, y2 / 2, y2);
+                Console.WriteLine("POOPING OUR CHILDREN");
+                nw = new Node(listNW, x1, x1 + x2 / 2, y1, y1 + y2 / 2);
+                ne = new Node(listNE, x1 + x2 / 2, x2, y1, y1 + y2 / 2);
+                sw = new Node(listSW, x1, x1 + x2 / 2, y1 + y2 / 2, y2);
+                se = new Node(listSE, x1 + x2 / 2, x2, y1 + y2 / 2, y2);
             }
         }
 

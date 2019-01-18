@@ -16,7 +16,7 @@ namespace Quadtree
 
             for(int i = 0; i < 10; i++)
             {
-                list.Add(new Vector2(rng.Next(0, 101), rng.Next(0, 101)));
+                list.Add(new Vector2(rng.Next(1, 100), rng.Next(1, 100)));
             }
 
             n = new Node(list, 0, 100, 0, 100);

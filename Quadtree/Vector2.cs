@@ -8,16 +8,16 @@ namespace Quadtree
 {
     class Vector2
     {
-        public int X
+        public double X
         {
             get; set;
         }
-        public int Y
+        public double Y
         {
             get; set;
         }
 
-        public Vector2(int x, int y)
+        public Vector2(double x, double y)
         {
             X = x;
             Y = y;
