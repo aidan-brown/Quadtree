@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Quadtree
 {
+    /// <summary>
+    ///This is a simple vector class that holds two double values
+    /// </summary>
     class Vector2
     {
         public double X
