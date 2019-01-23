@@ -67,7 +67,12 @@ namespace Quadtree
 
         public void PrintNode(String _s, String dir)
         {
-            String s = _s + "-" + dir;
+            String s = _s;
+            if (_s.Length > 0)
+            {
+                s += "-";
+            }
+             s += dir;
             if(nw != null)
             {
                 nw.PrintNode(s, "NW");
@@ -75,7 +80,7 @@ namespace Quadtree
                 sw.PrintNode(s, "SW");
                 se.PrintNode(s, "SE");
             }
-            else
+            else if(p.Count > 0)
             {
                 Console.WriteLine("==========={0}===========", s);
                 foreach (Vector2 v in p)

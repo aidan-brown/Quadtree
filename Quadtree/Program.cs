@@ -21,7 +21,7 @@ namespace Quadtree
 
             n = new Node(list, 0, 0, 100, 100);
 
-            n.PrintNode("", "");
+            n.PrintNode("","");
         }
     }
 }
